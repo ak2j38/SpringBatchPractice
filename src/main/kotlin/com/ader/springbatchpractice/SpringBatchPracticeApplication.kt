@@ -1,9 +1,11 @@
 package com.ader.springbatchpractice
 
+import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
+@EnableBatchProcessing
 class SpringBatchPracticeApplication
 
 fun main(args: Array<String>) {

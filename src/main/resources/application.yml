@@ -1,0 +1,13 @@
+spring:
+  batch:
+    job:
+      names: ${job.name:NONE}
+    jdbc:
+      initialize-schema: always
+    datasource:
+      url: jdbc:mysql://127.0.0.1:3306/spring_batch?useSSL=false&characterEncoding=UTF-8&serverTimezone=Asia/Seoul
+      username: root
+      password: password1234
+      driver-class-name: com.mysql.cj.jdbc.Driver
+    jpa:
+      show-sql: true

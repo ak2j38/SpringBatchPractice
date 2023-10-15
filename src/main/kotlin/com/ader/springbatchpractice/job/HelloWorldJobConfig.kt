@@ -17,17 +17,17 @@ private val logger = KotlinLogging.logger {}
 class HelloWorldJobConfig {
 
   @Bean
-  fun job(
+  fun helloWorldJob(
     jobRepository: JobRepository,
     transactionManager: PlatformTransactionManager
   ): Job {
     return JobBuilder("helloWorldJob", jobRepository)
-      .start(step(jobRepository, transactionManager))
+      .start(helloWorldStep(jobRepository, transactionManager))
       .build()
   }
 
   @Bean
-  fun step(
+  fun helloWorldStep(
     jobRepository: JobRepository,
     transactionManager: PlatformTransactionManager
   ): Step {
